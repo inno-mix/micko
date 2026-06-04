@@ -1,65 +1,476 @@
-import Image from "next/image";
+import Topbar from "@/components/Topbar";
+import TypedText from "@/components/TypedText";
+import ExperienceCounter from "@/components/ExperienceCounter";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <div className="glow" />
+      <Topbar />
+
+      {/* Hero */}
+      <header className="hero">
+        <div className="wrap">
+          <ScrollReveal>
+            <div className="eyebrow">
+              <span className="rule" /> SOFTWARE ENGINEER · BICOL, PH
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={60}>
+            <h1>
+              Micko
+              <br />
+              Mata<span className="ital">morosa</span>
+            </h1>
+          </ScrollReveal>
+
+          <ScrollReveal delay={120}>
+            <TypedText />
+          </ScrollReveal>
+
+          <div className="hero-grid">
+            <ScrollReveal delay={180}>
+              <p className="hero-summary">
+                <b>Backend-focused Software Engineer</b> with <b>6 years</b> of
+                experience shipping production systems—from{" "}
+                <b>scalable REST APIs</b> and high-throughput messaging
+                infrastructure to cloud-native AWS integrations and{" "}
+                <b>AI/LLM-powered analysis pipelines</b>. I turn complex backend
+                problems into reliable, observable products.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal delay={240}>
+              <div className="specs">
+                <div className="row">
+                  <span className="k">Role</span>
+                  <span className="v acc">Software Engineer</span>
+                </div>
+                <div className="row">
+                  <span className="k">Experience</span>
+                  <span className="v">
+                    <ExperienceCounter />
+                  </span>
+                </div>
+                <div className="row">
+                  <span className="k">Focus</span>
+                  <span className="v">Backend · AI · Cloud</span>
+                </div>
+                <div className="row">
+                  <span className="k">Status</span>
+                  <span className="v" style={{ color: "var(--online)" }}>
+                    ● Open to work
+                  </span>
+                </div>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      {/* About */}
+      <section id="about">
+        <div className="wrap">
+          <ScrollReveal>
+            <div className="sec-head">
+              <span className="sec-num">00 /</span>
+              <h2 className="sec-title">Profile</h2>
+              <span className="sec-line" />
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={60}>
+            <div
+              className="hero-summary"
+              style={{
+                maxWidth: "64ch",
+                fontSize: "18px",
+                color: "var(--ink)",
+              }}
+            >
+              I&apos;m an engineer who likes the parts of software that have to{" "}
+              <b>actually hold up</b> under load — concurrent SMS systems and
+              real-time analytics dashboards. Lately I work at the intersection
+              of <b>backend architecture and applied AI</b>, designing prompt
+              pipelines and evaluation structures that turn raw call data into
+              useful, automated insight.
+            </div>
+          </ScrollReveal>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Stack */}
+      <section id="stack">
+        <div className="wrap">
+          <ScrollReveal>
+            <div className="sec-head">
+              <span className="sec-num">01 /</span>
+              <h2 className="sec-title">Tech Stack</h2>
+              <span className="sec-line" />
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={60}>
+            <div className="stack">
+              {[
+                {
+                  label: "Languages",
+                  tags: ["JavaScript", "TypeScript", "Python"],
+                },
+                {
+                  label: "Frontend",
+                  tags: ["ReactJS", "Tailwind CSS"],
+                },
+                {
+                  label: "Backend",
+                  tags: ["Node.js", "Express.js", "FastAPI", "REST APIs"],
+                },
+                {
+                  label: "Databases",
+                  tags: ["PostgreSQL", "MongoDB", "MySQL", "DynamoDB"],
+                },
+                {
+                  label: "DevOps & Cloud",
+                  tags: ["AWS", "Docker", "GitLab CI/CD", "GitHub Actions"],
+                },
+                { label: "Tools", tags: ["Git", "VSCode"] },
+              ].map(({ label, tags }) => (
+                <div className="cell" key={label}>
+                  <div className="label">{label}</div>
+                  <div className="tags">
+                    {tags.map((t) => (
+                      <span className="tag" key={t}>
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={120}>
+            <div className="ai-banner">
+              <div className="label">AI &amp; Prompt Engineering</div>
+              <ul className="ai-list">
+                <li>
+                  Contributed to <b>complex prompt design</b>, evaluation
+                  structures, and optimization for LLM APIs
+                </li>
+                <li>
+                  Used AI-assisted dev tools (
+                  <b>Claude Code, GitHub Copilot, Antigravity</b>) to accelerate
+                  feature delivery
+                </li>
+                <li>
+                  Applied AI for automated{" "}
+                  <b>code generation, debugging, and workflow automation</b>
+                </li>
+                <li>
+                  Integrated intelligent AI services into{" "}
+                  <b>scalable backend architectures</b>
+                </li>
+              </ul>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section id="experience">
+        <div className="wrap">
+          <ScrollReveal>
+            <div className="sec-head">
+              <span className="sec-num">02 /</span>
+              <h2 className="sec-title">Experience</h2>
+              <span className="sec-line" />
+            </div>
+          </ScrollReveal>
+
+          <div className="exp">
+            <ScrollReveal delay={60}>
+              <article className="job">
+                <div className="job-meta">
+                  <div className="period">SEP 2020 — DEC 2025</div>
+                  <div className="org">Boom AI Solutions OPC</div>
+                </div>
+                <div className="job-body">
+                  <h3 className="job-title">Software Engineer</h3>
+                  <ul>
+                    <li>
+                      Built custom <b>CRM applications</b> with ReactJS
+                      frontends and Node.js/Express.js backends
+                    </li>
+                    <li>
+                      Designed scalable, secure <b>RESTful APIs</b> for
+                      mission-critical internal &amp; client-facing systems
+                    </li>
+                    <li>
+                      Integrated <b>AI/LLM capabilities</b> and analytics
+                      pipelines into backend services with cross-functional
+                      teams
+                    </li>
+                    <li>
+                      Engineered high-throughput{" "}
+                      <b>SMS communication systems</b> for concurrent customer
+                      engagement
+                    </li>
+                    <li>
+                      Wrote Python &amp; Node.js <b>automation scripts</b> for
+                      distributed workflows and large-scale data processing
+                    </li>
+                    <li>
+                      Architected an enterprise <b>Call Center platform</b> on
+                      Amazon Connect + AWS serverless (Lambda, DynamoDB, S3)
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </ScrollReveal>
+
+            <ScrollReveal delay={120}>
+              <article className="job">
+                <div className="job-meta">
+                  <div className="period">MAY 2019 — FEB 2020</div>
+                  <div className="org">Boomsourcing</div>
+                </div>
+                <div className="job-body">
+                  <h3 className="job-title">Junior Developer</h3>
+                  <ul>
+                    <li>
+                      Completed intensive <b>BoomCamp Training</b> in full-stack
+                      engineering with JavaScript &amp; Python
+                    </li>
+                    <li>
+                      Hands-on with <b>full-stack feature development</b>,
+                      external API integration, and modern design patterns
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section id="projects">
+        <div className="wrap">
+          <ScrollReveal>
+            <div className="sec-head">
+              <span className="sec-num">03 /</span>
+              <h2 className="sec-title">Selected Work</h2>
+              <span className="sec-line" />
+            </div>
+          </ScrollReveal>
+
+          <div className="projects">
+            <ScrollReveal delay={60}>
+              <article className="proj">
+                <div className="pid">PRJ — 001</div>
+                <h3>Boomerang CRM - AI-Powered Call Analysis System</h3>
+                <div className="scope">Team Collaboration · Backend + LLM</div>
+                <ul>
+                  <li>
+                    Production backend processing <b>large-scale call data</b>{" "}
+                    into AI-driven QA insights via LLM APIs
+                  </li>
+                  <li>
+                    Designed optimized <b>prompt pipelines </b> for
+                    summarization, QA scoring &amp; behavioral analysis
+                  </li>
+                  <li>
+                    Leveraged complex <b>MongoDB aggregation pipelines</b> for
+                    deep filtering &amp; real-time analytics
+                  </li>
+                  <li>
+                    Piped AI analysis directly into <b>monitoring dashboards</b>{" "}
+                    for stakeholder action
+                  </li>
+                </ul>
+                <div className="chips">
+                  <span>React</span>
+                  <span>TypeScript</span>
+                  <span>Node.js</span>
+                  <span>MongoDB</span>
+                  <span>Python</span>
+                  <span>RabbitMQ</span>
+                  <span>LLM APIs</span>
+                </div>
+                <a
+                  href="https://boomerang.boomdemand.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "6px",
+                    marginTop: "16px",
+                    fontSize: "12px",
+                    color: "var(--accent)",
+                    textDecoration: "none",
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
+                  }}
+                >
+                  ↗ Visit Website
+                </a>
+              </article>
+            </ScrollReveal>
+
+            <ScrollReveal delay={120}>
+              <article className="proj">
+                <div className="pid">PRJ — 002</div>
+                <h3>SMS &amp; Email Automation System</h3>
+                <div className="scope">
+                  Team Collaboration · Messaging Infra
+                </div>
+                <ul>
+                  <li>
+                    Built scalable messaging infrastructure on{" "}
+                    <b>tier-one APIs</b> (Twilio, Mailgun)
+                  </li>
+                  <li>
+                    Implemented <b>concurrent processing</b> for low-latency,
+                    high-volume delivery
+                  </li>
+                  <li>
+                    Designed reusable, <b>modular backend services</b> for
+                    customizable workflows
+                  </li>
+                </ul>
+                <div className="chips">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>SQS</span>
+                  <span>Twilio</span>
+                  <span>Mailgun</span>
+                </div>
+              </article>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Credentials */}
+      <section id="certs">
+        <div className="wrap">
+          <ScrollReveal>
+            <div className="sec-head">
+              <span className="sec-num">04 /</span>
+              <h2 className="sec-title">Credentials</h2>
+              <span className="sec-line" />
+            </div>
+          </ScrollReveal>
+
+          <div className="certs">
+            {[
+              {
+                seal: "AWS",
+                ct: "Certified Cloud Practitioner",
+                cs: "Amazon Web Services",
+              },
+              {
+                seal: "AWS",
+                ct: "Certified Developer — Associate",
+                cs: "Amazon Web Services",
+              },
+              {
+                seal: "BC",
+                ct: "BoomCamp Certificate",
+                cs: "Full-Stack Engineering",
+              },
+              {
+                seal: "BS",
+                ct: "BS Information Technology",
+                cs: "Forbes College, Legazpi",
+              },
+            ].map(({ seal, ct, cs }, i) => (
+              <ScrollReveal key={i} delay={i * 60}>
+                <div className="cert">
+                  <div className="seal">{seal}</div>
+                  <div>
+                    <div className="ct">{ct}</div>
+                    <div className="cs">{cs}</div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="contact" id="contact">
+        <div className="wrap">
+          <ScrollReveal>
+            <h2>
+              Let&apos;s build something
+              <br />
+              that <span className="ital">scales.</span>
+            </h2>
+          </ScrollReveal>
+
+          <ScrollReveal delay={60}>
+            <p>
+              Open to backend, full-stack, and applied-AI roles. The fastest way
+              to reach me is below.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={120}>
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "1px" }}
+            >
+              <div className="links">
+                <a href="mailto:mickomatamorosa@gmail.com">
+                  <span className="lk">Email</span>
+                  <span className="lv">mickomatamorosa@gmail.com</span>
+                </a>
+                <a href="tel:09272026288">
+                  <span className="lk">Phone / WhatsApp</span>
+                  <span className="lv">0927 202 6288</span>
+                </a>
+                <a
+                  href="https://maps.google.com/?q=Daraga,Albay"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="lk">Based in</span>
+                  <span className="lv">Daraga, Albay, PH</span>
+                </a>
+              </div>
+              <div className="links">
+                <a
+                  href="https://github.com/inno-mix"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="lk">GitHub</span>
+                  <span className="lv">/inno-mix</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/myxzaeyez/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="lk">LinkedIn</span>
+                  <span className="lv">/myxzaeyez</span>
+                </a>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <footer>
+            <span>
+              <span className="pulse" />
+              SYSTEM ONLINE — last deploy 2026
+            </span>
+            <span>© Micko M. Matamorosa</span>
+          </footer>
+        </div>
+      </section>
+    </>
   );
 }
