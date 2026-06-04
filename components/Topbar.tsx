@@ -14,10 +14,19 @@ export default function Topbar() {
           <a href="#projects">projects</a>
           <a href="#contact">contact</a>
         </nav>
-        <span className="status-live">
-          <span className="pulse" />
-          AVAILABLE
-        </span>
+        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          <a
+            href="/resume.pdf"
+            download="Matamorosa_Micko_Resume.pdf"
+            className="resume-btn"
+          >
+            ↓ Resume
+          </a>
+          <span className="status-live">
+            <span className="pulse" />
+            AVAILABLE
+          </span>
+        </div>
       </div>
     </div>
   );

@@ -157,6 +157,27 @@ body::after {
 .topnav a:hover::after {
   width: 100%;
 }
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.resume-btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
 .status-live {
   display: flex;
   align-items: center;

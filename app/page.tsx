@@ -458,6 +458,13 @@ export default function Home() {
                   <span className="lk">LinkedIn</span>
                   <span className="lv">/myxzaeyez</span>
                 </a>
+                <a
+                  href="/resume.pdf"
+                  download="Matamorosa_Micko_Resume.pdf"
+                >
+                  <span className="lk">Resume</span>
+                  <span className="lv">↓ Download PDF</span>
+                </a>
               </div>
             </div>
           </ScrollReveal>
