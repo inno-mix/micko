@@ -2,6 +2,70 @@ import Topbar from "@/components/Topbar";
 import TypedText from "@/components/TypedText";
 import ExperienceCounter from "@/components/ExperienceCounter";
 import ScrollReveal from "@/components/ScrollReveal";
+import ProjectsSection, { type Project } from "@/components/ProjectsSection";
+
+const PROJECTS: Project[] = [
+  {
+    pid: "PRJ — 001",
+    title: "Boomerang CRM - AI-Powered Call Analysis System",
+    scope: "Team Collaboration · Backend + LLM",
+    bullets: [
+      <>
+        Production backend processing <b>large-scale call data</b> into
+        AI-driven QA insights via LLM APIs
+      </>,
+      <>
+        Designed optimized <b>prompt pipelines</b> for summarization, QA
+        scoring &amp; behavioral analysis
+      </>,
+      <>
+        Leveraged complex <b>MongoDB aggregation pipelines</b> for deep
+        filtering &amp; real-time analytics
+      </>,
+      <>
+        Piped AI analysis directly into <b>monitoring dashboards</b> for
+        stakeholder action
+      </>,
+    ],
+    chips: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "Python",
+      "RabbitMQ",
+      "LLM APIs",
+    ],
+    url: "https://boomerang.boomdemand.com/",
+    screenshots: [
+      "/project-assets/boomerang/boomerang_img1.bb3eafce.png",
+      "/project-assets/boomerang/boomerang_img2.97dd1808.png",
+      "/project-assets/boomerang/boomerang_img3.f28015ba.png",
+      "/project-assets/boomerang/boomerang_img4.8235f436.png",
+      "/project-assets/boomerang/boomerang_img5.6564f325.png",
+    ],
+  },
+  {
+    pid: "PRJ — 002",
+    title: "SMS & Email Automation System",
+    scope: "Team Collaboration · Messaging Infra",
+    bullets: [
+      <>
+        Built scalable messaging infrastructure on <b>tier-one APIs</b>{" "}
+        (Twilio, Mailgun)
+      </>,
+      <>
+        Implemented <b>concurrent processing</b> for low-latency, high-volume
+        delivery
+      </>,
+      <>
+        Designed reusable, <b>modular backend services</b> for customizable
+        workflows
+      </>,
+    ],
+    chips: ["React", "Node.js", "SQS", "Twilio", "Mailgun"],
+  },
+];
 
 export default function Home() {
   return (
@@ -265,91 +329,9 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          <div className="projects">
-            <ScrollReveal delay={60}>
-              <article className="proj">
-                <div className="pid">PRJ — 001</div>
-                <h3>Boomerang CRM - AI-Powered Call Analysis System</h3>
-                <div className="scope">Team Collaboration · Backend + LLM</div>
-                <ul>
-                  <li>
-                    Production backend processing <b>large-scale call data</b>{" "}
-                    into AI-driven QA insights via LLM APIs
-                  </li>
-                  <li>
-                    Designed optimized <b>prompt pipelines </b> for
-                    summarization, QA scoring &amp; behavioral analysis
-                  </li>
-                  <li>
-                    Leveraged complex <b>MongoDB aggregation pipelines</b> for
-                    deep filtering &amp; real-time analytics
-                  </li>
-                  <li>
-                    Piped AI analysis directly into <b>monitoring dashboards</b>{" "}
-                    for stakeholder action
-                  </li>
-                </ul>
-                <div className="chips">
-                  <span>React</span>
-                  <span>TypeScript</span>
-                  <span>Node.js</span>
-                  <span>MongoDB</span>
-                  <span>Python</span>
-                  <span>RabbitMQ</span>
-                  <span>LLM APIs</span>
-                </div>
-                <a
-                  href="https://boomerang.boomdemand.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "6px",
-                    marginTop: "16px",
-                    fontSize: "12px",
-                    color: "var(--accent)",
-                    textDecoration: "none",
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  ↗ Visit Website
-                </a>
-              </article>
-            </ScrollReveal>
-
-            <ScrollReveal delay={120}>
-              <article className="proj">
-                <div className="pid">PRJ — 002</div>
-                <h3>SMS &amp; Email Automation System</h3>
-                <div className="scope">
-                  Team Collaboration · Messaging Infra
-                </div>
-                <ul>
-                  <li>
-                    Built scalable messaging infrastructure on{" "}
-                    <b>tier-one APIs</b> (Twilio, Mailgun)
-                  </li>
-                  <li>
-                    Implemented <b>concurrent processing</b> for low-latency,
-                    high-volume delivery
-                  </li>
-                  <li>
-                    Designed reusable, <b>modular backend services</b> for
-                    customizable workflows
-                  </li>
-                </ul>
-                <div className="chips">
-                  <span>React</span>
-                  <span>Node.js</span>
-                  <span>SQS</span>
-                  <span>Twilio</span>
-                  <span>Mailgun</span>
-                </div>
-              </article>
-            </ScrollReveal>
-          </div>
+          <ScrollReveal delay={60}>
+            <ProjectsSection projects={PROJECTS} />
+          </ScrollReveal>
         </div>
       </section>
 
