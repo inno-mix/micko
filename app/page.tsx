@@ -15,8 +15,8 @@ const PROJECTS: Project[] = [
         AI-driven QA insights via LLM APIs
       </>,
       <>
-        Designed optimized <b>prompt pipelines</b> for summarization, QA
-        scoring &amp; behavioral analysis
+        Designed optimized <b>prompt pipelines</b> for summarization, QA scoring
+        &amp; behavioral analysis
       </>,
       <>
         Leveraged complex <b>MongoDB aggregation pipelines</b> for deep
@@ -51,8 +51,8 @@ const PROJECTS: Project[] = [
     scope: "Team Collaboration · Messaging Infra",
     bullets: [
       <>
-        Built scalable messaging infrastructure on <b>tier-one APIs</b>{" "}
-        (Twilio, Mailgun)
+        Built scalable messaging infrastructure on <b>tier-one APIs</b> (Twilio,
+        Mailgun)
       </>,
       <>
         Implemented <b>concurrent processing</b> for low-latency, high-volume
@@ -76,16 +76,16 @@ const PROJECTS: Project[] = [
         complexity inputs
       </>,
       <>
-        <b>AI material suggestions</b> matched against a local Room database
-        of 90+ steel materials with Philippine market pricing
+        <b>AI material suggestions</b> matched against a local Room database of
+        90+ steel materials with Philippine market pricing
       </>,
       <>
         Full <b>quotation builder</b> — itemized labor, commission, materials
         &amp; misc costs with deterministic pricing and PDF export
       </>,
       <>
-        <b>Clean Architecture</b> (presentation → domain ← data) with Hilt
-        DI, 22+ use cases, and encrypted local storage
+        <b>Clean Architecture</b> (presentation → domain ← data) with Hilt DI,
+        22+ use cases, and encrypted local storage
       </>,
     ],
     chips: [
@@ -99,13 +99,52 @@ const PROJECTS: Project[] = [
       "Clean Architecture",
     ],
     screenshots: [
-      "/project-assets/fabrication-ai-assistant/Screenrecorder-2026-06-05-15-10-29-618.mp4",
       "/project-assets/fabrication-ai-assistant/Scanned_20260605-1516-01.jpg",
       "/project-assets/fabrication-ai-assistant/Scanned_20260605-1516-02.jpg",
       "/project-assets/fabrication-ai-assistant/Scanned_20260605-1516-03.jpg",
       "/project-assets/fabrication-ai-assistant/Scanned_20260605-1516-04.jpg",
       "/project-assets/fabrication-ai-assistant/Scanned_20260605-1516-05.jpg",
       "/project-assets/fabrication-ai-assistant/Scanned_20260605-1516-06.jpg",
+    ],
+  },
+  {
+    pid: "PRJ — 004",
+    title: "Mix Recipe",
+    scope: "Personal Project · Full-Stack Web",
+    bullets: [
+      <>
+        Browse <b>50+ recipes</b> from DummyJSON API with real-time search,
+        tag-based &amp; meal-type filtering, and pagination
+      </>,
+      <>
+        Full <b>CRUD operations</b> — create, edit, and delete recipes with
+        changes persisted in localStorage across page refreshes
+      </>,
+      <>
+        <b>Two-layer data architecture</b>: remote API as base source overlaid
+        with local mutations for seamless offline-first edits
+      </>,
+      <>
+        Form validation via <b>React Hook Form + Zod</b> with shadcn/ui
+        components built on Tailwind CSS v4
+      </>,
+    ],
+    chips: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "React Hook Form",
+      "Zod",
+      "DummyJSON API",
+      "localStorage",
+    ],
+    url: "https://mix-recipe.vercel.app/",
+    screenshots: [
+      "/project-assets/mix-recipe/01-home.png",
+      "/project-assets/mix-recipe/02-detail.png",
+      "/project-assets/mix-recipe/03-search.png",
+      "/project-assets/mix-recipe/04-new-recipe.png",
     ],
   },
 ];
@@ -483,10 +522,7 @@ export default function Home() {
                   <span className="lk">LinkedIn</span>
                   <span className="lv">/myxzaeyez</span>
                 </a>
-                <a
-                  href="/resume.pdf"
-                  download="Matamorosa_Micko_Resume.pdf"
-                >
+                <a href="/resume.pdf" download="Matamorosa_Micko_Resume.pdf">
                   <span className="lk">Resume</span>
                   <span className="lv">↓ Download PDF</span>
                 </a>
