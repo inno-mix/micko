@@ -65,6 +65,40 @@ const PROJECTS: Project[] = [
     ],
     chips: ["React", "Node.js", "SQS", "Twilio", "Mailgun"],
   },
+  {
+    pid: "PRJ — 003",
+    title: "Fabrication Metal Assistant",
+    scope: "Personal Project · Android + AI",
+    bullets: [
+      <>
+        Android app that generates <b>blueprint-style fabrication designs</b>{" "}
+        via Google Gemini API from user-defined type, size, style &amp;
+        complexity inputs
+      </>,
+      <>
+        <b>AI material suggestions</b> matched against a local Room database
+        of 90+ steel materials with Philippine market pricing
+      </>,
+      <>
+        Full <b>quotation builder</b> — itemized labor, commission, materials
+        &amp; misc costs with deterministic pricing and PDF export
+      </>,
+      <>
+        <b>Clean Architecture</b> (presentation → domain ← data) with Hilt
+        DI, 22+ use cases, and encrypted local storage
+      </>,
+    ],
+    chips: [
+      "Kotlin",
+      "Jetpack Compose",
+      "Android",
+      "Gemini API",
+      "Room DB",
+      "Hilt",
+      "Retrofit",
+      "Clean Architecture",
+    ],
+  },
 ];
 
 export default function Home() {
