@@ -147,6 +147,37 @@ const PROJECTS: Project[] = [
       "/project-assets/mix-recipe/04-new-recipe.png",
     ],
   },
+  {
+    pid: "PRJ — 005",
+    title: "ERCBee",
+    scope: "Team Collaboration · CRM + WordPress",
+    bullets: [
+      <>
+        Contributed to a <b>WordPress-based ERC tax credit CRM</b> used
+        by businesses claiming COVID-era payroll tax refunds
+      </>,
+      <>
+        Optimized <b>database queries</b> to speed up data retrieval
+        across large employee and claim datasets
+      </>,
+      <>
+        Built <b>role-based data filtering</b> — surfacing only
+        relevant records per authenticated user and their applied filters
+      </>,
+      <>
+        Delivered improvements via <b>AJAX-driven interactions</b> for
+        real-time UI updates without full page reloads
+      </>,
+    ],
+    chips: ["PHP", "WordPress", "AJAX", "MySQL"],
+    url: "https://www.ercbee.com/",
+    screenshots: [
+      "/project-assets/ercbee/01-home.png",
+      "/project-assets/ercbee/02-features.png",
+      "/project-assets/ercbee/03-erc-explained.png",
+      "/project-assets/ercbee/04-mid-section.png",
+    ],
+  },
 ];
 
 export default function Home() {
