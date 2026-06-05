@@ -98,6 +98,15 @@ const PROJECTS: Project[] = [
       "Retrofit",
       "Clean Architecture",
     ],
+    screenshots: [
+      "/project-assets/fabrication-ai-assistant/Screenrecorder-2026-06-05-15-10-29-618.mp4",
+      "/project-assets/fabrication-ai-assistant/Scanned_20260605-1516-01.jpg",
+      "/project-assets/fabrication-ai-assistant/Scanned_20260605-1516-02.jpg",
+      "/project-assets/fabrication-ai-assistant/Scanned_20260605-1516-03.jpg",
+      "/project-assets/fabrication-ai-assistant/Scanned_20260605-1516-04.jpg",
+      "/project-assets/fabrication-ai-assistant/Scanned_20260605-1516-05.jpg",
+      "/project-assets/fabrication-ai-assistant/Scanned_20260605-1516-06.jpg",
+    ],
   },
 ];
 

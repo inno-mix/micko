@@ -819,6 +819,45 @@ section {
 .carousel-dot:hover:not(.carousel-dot--active) {
   background: var(--ink-dim);
 }
+.carousel-dot--video {
+  border-radius: 2px;
+  width: 10px;
+}
+
+/* video thumbnail in carousel */
+.carousel-video-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 300px;
+}
+.carousel-video-preview {
+  display: block;
+  max-width: 100%;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.carousel-video-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(11, 12, 14, 0.75);
+  border: 1px solid var(--line-strong);
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  padding: 3px 10px;
+  border-radius: 2px;
+  pointer-events: none;
+  white-space: nowrap;
+}
 
 .carousel-expand-btn {
   position: absolute;
@@ -870,6 +909,10 @@ section {
   object-fit: contain;
   border-radius: 2px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+}
+/* video in fullscreen inherits fs-img sizing */
+video.fs-img {
+  background: #000;
 }
 @keyframes fs-slide-next {
   from { transform: translateX(3%); opacity: 0; }
@@ -1143,3 +1186,4 @@ footer .pulse {
     padding: 0 20px;
   }
 }
+/* Fri Jun  5 15:39:18 PST 2026 */

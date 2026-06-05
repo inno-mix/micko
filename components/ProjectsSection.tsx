@@ -102,6 +102,46 @@ function ProjectCard({
   );
 }
 
+const isVideo = (src: string) => /\.(mp4|webm|ogg|mov)$/i.test(src);
+
+function MediaThumb({
+  src,
+  alt,
+  animClass,
+  onClick,
+}: {
+  src: string;
+  alt: string;
+  animClass: string;
+  onClick: () => void;
+}) {
+  if (isVideo(src)) {
+    return (
+      <div className={`carousel-img ${animClass} carousel-video-wrap`} onClick={onClick} style={{ cursor: "zoom-in" }}>
+        <video
+          src={src}
+          muted
+          autoPlay
+          loop
+          playsInline
+          className="carousel-video-preview"
+        />
+        <div className="carousel-video-badge">▶ VIDEO</div>
+      </div>
+    );
+  }
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={src}
+      alt={alt}
+      className={`carousel-img ${animClass}`}
+      onClick={onClick}
+      style={{ cursor: "zoom-in" }}
+    />
+  );
+}
+
 function ImageCarousel({
   images,
   title,
@@ -133,19 +173,17 @@ function ImageCarousel({
   return (
     <div className="carousel">
       <div className="carousel-track" ref={trackRef}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <MediaThumb
           key={animKey}
           src={images[idx]}
-          alt={`${title} screenshot ${idx + 1}`}
-          className={`carousel-img carousel-img--${dir}`}
+          alt={`${title} media ${idx + 1}`}
+          animClass={`carousel-img--${dir}`}
           onClick={() => onFullscreen(idx)}
-          style={{ cursor: "zoom-in" }}
         />
         {images.length > 1 && (
           <>
-            <button className="carousel-btn carousel-btn--prev" onClick={prev} aria-label="Previous image">‹</button>
-            <button className="carousel-btn carousel-btn--next" onClick={next} aria-label="Next image">›</button>
+            <button className="carousel-btn carousel-btn--prev" onClick={prev} aria-label="Previous">‹</button>
+            <button className="carousel-btn carousel-btn--next" onClick={next} aria-label="Next">›</button>
           </>
         )}
         <button
@@ -161,12 +199,12 @@ function ImageCarousel({
       </div>
       {images.length > 1 && (
         <div className="carousel-dots">
-          {images.map((_, i) => (
+          {images.map((src, i) => (
             <button
               key={i}
-              className={`carousel-dot${i === idx ? " carousel-dot--active" : ""}`}
+              className={`carousel-dot${i === idx ? " carousel-dot--active" : ""}${isVideo(src) ? " carousel-dot--video" : ""}`}
               onClick={() => go(i, i > idx ? "next" : "prev")}
-              aria-label={`Go to image ${i + 1}`}
+              aria-label={`Go to ${isVideo(src) ? "video" : "image"} ${i + 1}`}
             />
           ))}
         </div>
@@ -228,14 +266,26 @@ function FullscreenViewer({
       {images.length > 1 && (
         <div className="fs-counter">{idx + 1} / {images.length}</div>
       )}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        key={animKey}
-        src={images[idx]}
-        alt={`${title} screenshot ${idx + 1}`}
-        className={`fs-img fs-img--${dir}`}
-        onClick={(e) => e.stopPropagation()}
-      />
+      {isVideo(images[idx]) ? (
+        <video
+          key={animKey}
+          src={images[idx]}
+          className={`fs-img fs-img--${dir}`}
+          controls
+          autoPlay
+          playsInline
+          onClick={(e) => e.stopPropagation()}
+        />
+      ) : (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          key={animKey}
+          src={images[idx]}
+          alt={`${title} media ${idx + 1}`}
+          className={`fs-img fs-img--${dir}`}
+          onClick={(e) => e.stopPropagation()}
+        />
+      )}
       {images.length > 1 && (
         <>
           <button className="fs-nav fs-nav--prev" onClick={prev} aria-label="Previous image">‹</button>
