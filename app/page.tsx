@@ -110,23 +110,19 @@ const PROJECTS: Project[] = [
   {
     pid: "PRJ — 004",
     title: "Mix Recipe",
-    scope: "Personal Project · Full-Stack Web",
+    scope: "Personal Project · API Integration",
     bullets: [
       <>
-        Browse <b>50+ recipes</b> from DummyJSON API with real-time search,
-        tag-based &amp; meal-type filtering, and pagination
+        Frontend-only project consuming the <b>DummyJSON API</b> — no backend,
+        no database
       </>,
       <>
-        Full <b>CRUD operations</b> — create, edit, and delete recipes with
-        changes persisted in localStorage across page refreshes
+        Fetches and displays <b>50+ recipes</b> with real-time search, tag-based
+        &amp; meal-type filtering, and pagination
       </>,
       <>
-        <b>Two-layer data architecture</b>: remote API as base source overlaid
-        with local mutations for seamless offline-first edits
-      </>,
-      <>
-        Form validation via <b>React Hook Form + Zod</b> with shadcn/ui
-        components built on Tailwind CSS v4
+        UI built with <b>shadcn/ui + Tailwind CSS v4</b>, forms validated via
+        React Hook Form + Zod
       </>,
     ],
     chips: [
@@ -137,7 +133,6 @@ const PROJECTS: Project[] = [
       "React Hook Form",
       "Zod",
       "DummyJSON API",
-      "localStorage",
     ],
     url: "https://mix-recipe.vercel.app/",
     screenshots: [
@@ -153,20 +148,20 @@ const PROJECTS: Project[] = [
     scope: "Team Collaboration · CRM + WordPress",
     bullets: [
       <>
-        Contributed to a <b>WordPress-based ERC tax credit CRM</b> used
-        by businesses claiming COVID-era payroll tax refunds
+        Contributed to a <b>WordPress-based ERC tax credit CRM</b> used by
+        businesses claiming COVID-era payroll tax refunds
       </>,
       <>
-        Optimized <b>database queries</b> to speed up data retrieval
-        across large employee and claim datasets
+        Optimized <b>database queries</b> to speed up data retrieval across
+        large employee and claim datasets
       </>,
       <>
-        Built <b>role-based data filtering</b> — surfacing only
-        relevant records per authenticated user and their applied filters
+        Built <b>role-based data filtering</b> — surfacing only relevant records
+        per authenticated user and their applied filters
       </>,
       <>
-        Delivered improvements via <b>AJAX-driven interactions</b> for
-        real-time UI updates without full page reloads
+        Delivered improvements via <b>AJAX-driven interactions</b> for real-time
+        UI updates without full page reloads
       </>,
     ],
     chips: ["PHP", "WordPress", "AJAX", "MySQL"],
