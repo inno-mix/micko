@@ -47,6 +47,59 @@ const PROJECTS: Project[] = [
   },
   {
     pid: "PRJ — 002",
+    title: "Job Queue & Worker Processing System",
+    scope: "Personal Project · Full-Stack + AI Layer",
+    bullets: [
+      <>
+        Full-stack <b>job queue &amp; worker processing platform</b> — a
+        production-grade TypeScript/Express/PostgreSQL backend paired with a
+        real-time React 19 dashboard
+      </>,
+      <>
+        Safe multi-worker concurrency via{" "}
+        <b>
+          <code>SELECT FOR UPDATE SKIP LOCKED</code>
+        </b>
+        , priority scheduling (critical → low), and retry with{" "}
+        <b>exponential backoff + jitter</b>
+      </>,
+      <>
+        <b>AI layer on local LLMs (Ollama)</b> for RAG queries, call analysis
+        &amp; summarization — with token usage, <b>cost tracking</b>, and
+        automated <b>eval scoring</b> (faithfulness / relevance / completeness)
+      </>,
+      <>
+        Live dashboard streaming job state &amp; metrics over{" "}
+        <b>WebSockets</b> — Recharts analytics, worker-fleet status, and
+        document upload for RAG
+      </>,
+    ],
+    chips: [
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Prisma",
+      "React",
+      "Tailwind CSS",
+      "TanStack Query",
+      "Socket.io",
+      "Recharts",
+      "Ollama",
+      "Docker",
+      "Zod",
+    ],
+    screenshots: [
+      "/project-assets/job-queue-dashboard/01-dashboard.png",
+      "/project-assets/job-queue-dashboard/04-analytics.png",
+      "/project-assets/job-queue-dashboard/02-ai-jobs.png",
+      "/project-assets/job-queue-dashboard/03-ai-ops.png",
+      "/project-assets/job-queue-dashboard/05-workers.png",
+      "/project-assets/job-queue-dashboard/06-documents.png",
+    ],
+  },
+  {
+    pid: "PRJ — 003",
     title: "SMS & Email Automation System",
     scope: "Team Collaboration · Messaging Infra",
     bullets: [
@@ -66,7 +119,7 @@ const PROJECTS: Project[] = [
     chips: ["React", "Node.js", "SQS", "Twilio", "Mailgun"],
   },
   {
-    pid: "PRJ — 003",
+    pid: "PRJ — 004",
     title: "Fabrication Metal Assistant",
     scope: "Personal Project · Android + AI",
     bullets: [
@@ -108,7 +161,7 @@ const PROJECTS: Project[] = [
     ],
   },
   {
-    pid: "PRJ — 004",
+    pid: "PRJ — 005",
     title: "Mix Recipe",
     scope: "Personal Project · API Integration",
     bullets: [
@@ -143,7 +196,7 @@ const PROJECTS: Project[] = [
     ],
   },
   {
-    pid: "PRJ — 005",
+    pid: "PRJ — 006",
     title: "ERCBee",
     scope: "Team Collaboration · CRM + WordPress",
     bullets: [
